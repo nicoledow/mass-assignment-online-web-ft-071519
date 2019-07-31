@@ -17,7 +17,7 @@ class Person
   
   def initialize(attributes)
     attributes.each do |key, val|
-      binding.pry
+      self.send(("#{key}=", val))
     end
   end
   
